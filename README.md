@@ -40,6 +40,7 @@ If you have downloaded R or RStudio, make sure that your version is up to date.
 Open RStudio and click on the following `File-> New File -> RMarkdown...`, when promt to install additional packages, click **yes**.  
 
 ### 4. Install LaTeX 
-If you could not install LaTeX previously, run the following 2 lines of code in the RStudio console:
-    install.packages(c("tinytex", "rmarkdown"))
-    tinytex::install_tinytex()
+If you could not install LaTeX previously, run the following 2 lines of code in the RStudio console:  
+
+`install.packages(c("tinytex", "rmarkdown"))`  
+`tinytex::install_tinytex()` 
