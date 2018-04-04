@@ -6,7 +6,10 @@ UC Berkeley ([Berkeley Initative for Transparency in the Social Sciences](http:/
 
 The numbered files/directories will take you through the workshop in order.
 
-First 1-GitDemo.md is an introduction to version control with Git using the Github Desktop app.
+First 1-GitDemo.md is an introduction to version control with Git using the Github Desktop app.  
+Second 2-dynamicdocs is an introduction to dynamic documents using RMarkdown and some Stata.
+
+
 
 -----------
 
@@ -25,4 +28,18 @@ Note that Github Desktop works on Mac and Windows. If you're a Linux user, you m
 
 ### 2. A good text editor
 
-Writing good code is facilitated by a good text editor. You can get away without one because you almost certainly already have a program on your computer that can save simple ASCII text files (Notepad for Windows, or TextEdit for Mac--but change the default from Rich Text to Plain Text) but modern text editors do syntax highlighting, auto-complete, and a bunch of other cool stuff for you. I suggest [Atom](http://atom.io). You can extend its functionality by going to settings and adding packages (one to render Markdown as PDF might be especially helpful.)
+Writing good code is facilitated by a good text editor. You can get away without one because you almost certainly already have a program on your computer that can save simple ASCII text files (Notepad for Windows, or TextEdit for Mac--but change the default from Rich Text to Plain Text) but modern text editors do syntax highlighting, auto-complete, and a bunch of other cool stuff for you. I suggest [Atom](http://atom.io). You can extend its functionality by going to settings and adding packages (one to render Markdown as PDF might be especially helpful.)  
+
+
+### 3. Install R and RStudio  
+- [R](https://cloud.r-project.org/)  
+- [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
+
+If you have downloaded R or RStudio, make sure that your version is up to date. 
+
+Open RStudio and click on the following `File-> New File -> RMarkdown...`, when promt to install additional packages, click **yes**.  
+
+### 4. Install LaTeX 
+If you could not install LaTeX previously, run the following 2 lines of code in the RStudio console:
+    install.packages(c("tinytex", "rmarkdown"))
+    tinytex::install_tinytex()
