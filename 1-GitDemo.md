@@ -24,7 +24,7 @@ And move to a situation more like this one:
 ![Git xkcd comic](https://imgs.xkcd.com/comics/git.png)
 
 
-### Background:
+### Background & Motivation:
 At a fundamental level, the problem is that we do not create perfect products the first time around. We add to them, remove things from them, and revise them heavily. For word processing tasks, like the PhD Comics example, this is perhaps harmless, and really is only costing you time in finding the correct document, or some embarrassment if you send the wrong document to a colleague (or overshare the version that still has a bunch of tracked changes.)
 
 You may already be collecting, cleaning, reshaping, and analyzing your data in a way that is self documenting. That is to say, you are writing it in code, and are not modifying pieces of it by hand or in a GUI. The upside to this is reproducibility. The downside is that if any of your code is the wrong version, your whole pipeline gets bunked.
@@ -33,7 +33,7 @@ A fairly common workflow setup can be seen [here](https://bids.github.io/2017-01
 
 The aspirational goal is that I should be able to sneak into your lab late at night, delete everything except for your raw data and your code, and you should be able to run a single command to regenerate EVERYTHING, including all of your results, tables, and figures in their final, polished form. Think of this as the “push button” or "one click" workflow.
 
-Unlike the situation above, when you can't find the right version of your processing pipeline, analytical workflow, or data, you also lose the ability to recreate any results that you've generated. If your results are not reproducible, then they are also :
+Unlike the situation above, when you can't find the right version of your processing pipeline, analytical workflow, or data, you also lose the ability to recreate any results that you've generated. If your results are not reproducible, then they are also:
 
 1. Not verifiable
 2. Not explainable
@@ -54,7 +54,7 @@ However, the upsides are:
 2. Always being able to revert to your last working pipeline
 3. Easy to discover what has changed (i.e. gone wrong), and when
 
-Luckily for us, GitHub has built a GUI that makes working with `git` easier, although at some power cost. Many experienced users use the command line (Terminal on a Mac, Git Shell or Git Bash on Windows) to run Git, but GitHub Dekstop can do some of the simpler tasks, and you can do a bunch more on the website Github, so that's what we'll use.
+Luckily for us, GitHub has built a GUI that makes working with `git` easier, although at some power cost. Many experienced users use the command line (Terminal on a Mac, Git Shell or Git Bash on Windows) to run Git, but [GitHub Desktop](http://desktop.github.com) can do some of the simpler tasks, and you can do a bunch more on the website [Github.com](http://www.github.com), so that's what we'll use. Note that you can do many of the same tasks within the text editor [Atom](https://atom.io) and within [R Studio](http://rstudio.com), so if you use those for editing scripts, you can simplify your life a bit and do the version control there instead.
 
 We may have to use the command line to do something. If that's scary, help is [here](http://swcarpentry.github.io/shell-novice/02-filedir/), or don't be afraid to ask.
 
@@ -70,27 +70,27 @@ We may have to use the command line to do something. If that's scary, help is [h
 
 We're going to use our new GitHub account to `fork`<sup>1</sup> a repository -- a repository for this workshop, as it just so happens!
 
-* Navigate to [github.com/BITSS/WorldBankJan2018](github.com/BITSS/WorldBankJan2018)
+* Navigate to [github.com/BITSS/RT2Amsterdam2018](github.com/BITSS/RT2Amsterdam2018)
 * Look for a button that says "fork" in the upper right-hand corner
 * Click it!
 
 This repository will then be copied to your own account (*not* your computer), so that you can make changes to it if you like. Since the fork exists on GitHub's servers, any changes that you push to those servers means those changes are already backed up for you.
 
-* To avoid confusion, change the name of the repository to something like `GitWorkshop` by clicking on settings. *By they way: what's a "repository"?*
+* To avoid confusion, you may want to change the name of the repository to something like `GitWorkshop` by clicking on settings. *By they way: what's a "repository"?*
 
 ### Cloning, Creating, and Changing:
-The options in the Github app under the "+" button are to add, create, or clone a repository. *Adding* is finding and telling the app that a repository is already on your computer. *Creating* creates a new repository. *Cloning* is copying an existing repository from your GitHub account.
+The options in the Github app under the File menu are to create a new, add a local, or clone a repository.  *Creating* creates a new repository. *Adding* is finding and telling the app that a repository is already on your computer. *Cloning* is copying an existing repository from your GitHub account.
 
-To clone a public repository that doesn't belong to you, click the download button that is just to the left of the "Download ZIP" button on the repository's GitHub.com page, or drag and drop the URL from your browser into the open GitHub Desktop app (oddly, there is no way to type the URL directly into the app.)  
+To clone a public repository that doesn't belong to you, click the download button that is just to the left of the "Download ZIP" button on the repository's GitHub.com page, or drag and drop the URL from your browser into the open GitHub Desktop app.
 
 * Clone your fork of the workshop repository. Navigate to it on your computer to verify that it's there.
 
 * What files are in there? Do you see anything you don't understand? If not, try this: [[Mac](http://www.macworld.co.uk/how-to/mac-software/how-show-hidden-files-in-mac-os-x-finder-funter-macos-sierra-3520878/)][[Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files)]
 If you do see the hidden files, *never ever ever* mess with them.
 
-Now that you've succsefully cloned a repository, we'll create our own.
+Now that you've successfully cloned a repository, we'll create our own.
 
-* Create a new repository. Give it a name like `codepoetry_<yourfavoriteanimal>` *What files are in it?*
+* Create a new repository. Give it a name like `codepoetry_<yourname>` *What files are in it?*
 * Create a text file called `README.md` using your text editor. Give the file three lines of text:
 
 >Turning and turning in the widening gyre
@@ -150,7 +150,7 @@ Github Desktop automatically adds any file you change to the staging area. That'
 There are several ways to undo things with git, not all of which are possible with Github Desktop. The GH methods are to:
 1. Right click on the file on the file and Discard changes. *What areas is this dealing with? Note this is like `git reset filename` on the command line.*
 
-2. Click on a change in the History section, and click on Revert.
+2. Right click on a change in the History section, and click on Revert.
 
 3. Click on the settings gear and click Undo latest commit.
 
