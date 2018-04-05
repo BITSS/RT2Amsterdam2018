@@ -76,7 +76,7 @@ We're going to use our new GitHub account to `fork`<sup>1</sup> a repository -- 
 
 This repository will then be copied to your own account (*not* your computer), so that you can make changes to it if you like. Since the fork exists on GitHub's servers, any changes that you push to those servers means those changes are already backed up for you.
 
-* To avoid confusion, you may want to change the name of the repository to something like `GitWorkshop` by clicking on settings. *By they way: what's a "repository"?*
+* To avoid confusion, you may want to change the name of the repository to something like `GitWorkshop` by clicking on settings. *By the way: what's a "repository"?*
 
 ### Cloning, Creating, and Changing:
 The options in the Github app under the File menu are to create a new, add a local, or clone a repository.  *Creating* creates a new repository. *Adding* is finding and telling the app that a repository is already on your computer. *Cloning* is copying an existing repository from your GitHub account.
@@ -239,6 +239,8 @@ This is how you suggest changes to repositories to which you aren't a full fledg
 Many, if not most, experienced users will use Git via the command line. (Terminal on a Mac, the Git Shell that came with the Desktop app, Windows PowerShell, there are a lot of options. They're all where you type commands for your computer to execute.) You can read why [here](http://programmers.stackexchange.com/questions/173297/why-learn-git-when-there-are-gui-apps-for-github). Basically, it's more powerful.
 
 There are a million and one online tutorials for Git in the command line. [Software Carpentry's](http://swcarpentry.github.io/git-novice/) is good, as is [Atlassian's](https://www.atlassian.com/git/tutorials/). The basic stuff is all nicely summarized [here](http://rogerdudler.github.io/git-guide/) in a single page.
+
+If you want more on how Git can be used for reproducible science, see Karthik Ram's [paper](https://scfbm.biomedcentral.com/articles/10.1186/1751-0473-8-7) or [slides](http://karthik.github.io/git_intro/#/slide-title).
 
 
 **1.** For more on forking, see [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
