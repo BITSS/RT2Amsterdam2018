@@ -198,7 +198,7 @@ There's a conflict tutorial [here](https://bids.github.io/2017-01-12-ucb/lessons
 
 You can store stuff online at GitHub.com (or any server with Git installed), which will enable you to work on multiple computers.
 
-Git frequently refers to `push`ing (sending) and `pull`ing (retrieving). 
+Git frequently refers to `push`ing (sending) and `pull`ing or `fetch`ing <sup>2</sup> (retrieving).
 
 To publish your repository on the web.
 * Just click the Publish button.
@@ -242,3 +242,5 @@ There are a million and one online tutorials for Git in the command line. [Softw
 
 
 **1.** For more on forking, see [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
+
+**2.** It probably won't matter for our purposes, but pulling is fetching plus merging.
