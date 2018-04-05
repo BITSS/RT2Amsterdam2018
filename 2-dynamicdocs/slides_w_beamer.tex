@@ -282,7 +282,7 @@ here goes the code
 ```
 \end{verbatim}
 
-To write inline use only one Backtick to open followed by an ``r''" and
+To write inline use only one Back-tick to open followed by an ``r'' and
 one to close \texttt{\textasciigrave{}r\ 1+1\textasciigrave{}} in the
 output.
 
@@ -302,7 +302,7 @@ same birthday?
 \end{quote}
 
 \begin{quote}
-Is it something like \(\frac{1}{365} \times N =\) 0.074?
+Is it something like \(\frac{1}{365} \times N =\) 0.085?
 \end{quote}
 
 \end{frame}
@@ -344,7 +344,7 @@ Actually the math says otherwise:
 
 \begin{align} 
  1 -  p(n) &= 1 \times \left(1-\frac{1}{365}\right) \times \left(1-\frac{2}{365}\right) \times \cdots \times \left(1-\frac{n-1}{365}\right) \nonumber  \\  &= \frac{ 365 \times 364 \times \cdots \times (365-n+1) }{ 365^n } \nonumber \\ &= \frac{ 365! }{ 365^n (365-n)!} = \frac{n!\cdot\binom{365}{n}}{365^n}\\
-p(n= 27) &= 0.627  \nonumber
+p(n= 31) &= 0.73  \nonumber
 \end{align}
 
 \end{frame}
@@ -370,10 +370,10 @@ solutions into your dynamic document.
 
 \begin{frame}{Don't like math? Let's run a simple simulation!}
 
-1 - Simulate 10,000 rooms with \(n = 27\) random birthdays, and store
+1 - Simulate 10,000 rooms with \(n = 31\) random birthdays, and store
 the results in matrix where each row represents a room.\\
 2 - For each room (row) compute the number of unique birthdays.\\
-3 - Compute the average number of times a room has 27 unique birthdays,
+3 - Compute the average number of times a room has 31 unique birthdays,
 across 10,000 simulations, and report the complement.
 
 \end{frame}
@@ -398,13 +398,13 @@ across 10,000 simulations, and report the complement.
 \NormalTok{  result =}\StringTok{ }\DecValTok{1} \OperatorTok{-}\StringTok{ }\KeywordTok{mean}\NormalTok{(all.different)}
 \KeywordTok{return}\NormalTok{(result)}
 \NormalTok{\}}
-\NormalTok{n.pers.param =}\StringTok{ }\DecValTok{27}\NormalTok{; n.sims.param =}\StringTok{ }\FloatTok{1e4}
+\NormalTok{n.pers.param =}\StringTok{ }\DecValTok{31}\NormalTok{; n.sims.param =}\StringTok{ }\FloatTok{1e4}
 \KeywordTok{birthday.prob}\NormalTok{(n.pers.param,n.sims.param)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.6333
+## [1] 0.7252
 \end{verbatim}
 
 \end{frame}
@@ -415,11 +415,11 @@ across 10,000 simulations, and report the complement.
 \tightlist
 \item
   Many people originally think of a prob \textasciitilde{}
-  \(\frac{1}{365} \times N =\) 0.074
+  \(\frac{1}{365} \times N =\) 0.085
 \item
-  However the true probability is of \(p(n= 27) = 0.627\)
+  However the true probability is of \(p(n= 31) = 0.73\)
 \item
-  And the simulated probability is of 0.6298
+  And the simulated probability is of 0.726
 \end{itemize}
 
 \end{frame}
@@ -473,7 +473,164 @@ We will go step by step using
 
 \end{frame}
 
+\begin{frame}[fragile]{Description}
+
+\begin{itemize}
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Description''
+\item
+  Write a brief description of our goal in the DD.
+\item
+  You might want to insert a reference to the paper:
+  \href{http://economics.mit.edu/files/589}{link here}.
+\item
+  Specific content not so relevant, just refer to ``a treatment'' and
+  ``a outcome''.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Getting the raw data}
+
+\begin{itemize}
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Raw Data''.\\
+\item
+  Describe what you will do.\\
+\item
+  Create two code chunks:
+
+\begin{verbatim}
+```{r download data, eval=FALSE, echo=TRUE, 
+warning=FALSE, results='hide', message=FALSE}
+here goes the code
+```
+\end{verbatim}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Cleaning the data}
+
+\begin{itemize}
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Data Cleaning''.\\
+\item
+  Describe what you will do:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Restrict sample to years between 1979 and 1995 (inclusive)\\
+  \item
+    Guam from the sample (state = 98).\\
+  \end{itemize}
+\item
+  Create one code chunk:
+
+\begin{verbatim}
+```{r data cleaning, echo=TRUE}
+here goes the code
+```
+\end{verbatim}
+\item
+  Add some description on the data (using dynamic reporting). See
+  solutions (Figure \texttt{5-2-4\_solutions.Rmd} line 58) for examples.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Build the analytic file}
+
+\begin{itemize}
+\tightlist
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Build analytic file''.\\
+\item
+  Describe what you will do.\\
+\item
+  We need to construct the following variables:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Log of total employment\\
+  \item
+    Normalize the year variable to 1978\\
+  \end{itemize}
+\item
+  Insert a new code chunk:
+\end{itemize}
+
+\begin{verbatim}
+```{r analytic file, echo=TRUE}
+here goes the code
+```
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Describe the model to estimate (optional)}
+
+\begin{itemize}
+\tightlist
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Define model to
+  estimate''.\\
+\item
+  One line describing what we want to estimate (i.e. ``We want to
+  estimate a fixed effect model with lead and lag treatment
+  variables'').\\
+\item
+  A mathematical model that represents the equation to be estimated
+  (look at solutions).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Vizualize the results (optional)}
+
+\begin{itemize}
+\item
+  Begin a new section (\texttt{\#\#}), titled ``Vizualize the
+  results''.\\
+\item
+  One line describing what we want to estimate (i.e. ``This estimates
+  are then used to create figure 3 of the original paper, which is
+  figure 5.2.4 in MHE.'').
+
+\begin{verbatim}
+```{r viz}
+here goes the code
+```
+\end{verbatim}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Practical Excercise \#2}
+
+\begin{itemize}
+\tightlist
+\item
+  Run your version into multiple outputs.\\
+\item
+  Run the solutions version into multiple outputs.\\
+\item
+  Compare document with original version of the code.
+\end{itemize}
+
+\end{frame}
+
 \section{Practical Excercise \#3}\label{practical-excercise-3}
+
+\begin{frame}[fragile]{Goals for excercise \#3}
+
+\textbf{Primary Goals:}\\
+1 - Map the concepts of DD into Stata \texttt{dyndoc}.\\
+2 - Demonstrate how to execute a DD in Stata.
+
+\end{frame}
 
 \begin{frame}[fragile]{Hands-on excercise \#3: Stata and TIER}
 
@@ -485,14 +642,6 @@ We will go step by step using
 \texttt{dyndoc\ "filepath/dyndoc\_debt\_growth/debt\ and\ growth\ stata\ dyndoc.do",\ replace}\\
 5- Go to the folder and click in
 \texttt{debt\ and\ growth\ stata\ dyndoc.html}
-
-\end{frame}
-
-\begin{frame}[fragile]{Goals for excercise \#3}
-
-\textbf{Primary Goals:}\\
-1 - Map the concepts of DD into Stata \texttt{dyndoc}.\\
-2 - Demostrate how to execute a DD in Stata.
 
 \end{frame}
 

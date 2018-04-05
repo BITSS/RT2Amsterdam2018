@@ -47,6 +47,7 @@ The data downloaded data set contains `r length(unique(autor$year))` years (from
 
 
 ## "Clean" the data
+Restrict sample to years between 1979 and 1995 (inclusive), and deleting Guam from the sample (state = 98). 
 
 ```{r data cleaning, echo=TRUE}
 # Restrict sample

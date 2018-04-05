@@ -68,7 +68,7 @@ output: html_document
 ```  
 
 ```{r global pars, eval=TRUE, echo=FALSE, results='hide'}
-n.pers = 27
+n.pers = 31
 ```  
 
 
@@ -101,7 +101,7 @@ here goes the code
 ```
 ````
 
-To write inline use only one Backtick to open followed by an "r"" and one to close `` `r
+To write inline use only one Back-tick to open followed by an "r" and one to close `` `r
 1+1` `` in the output.
 
 # Practical Excercise #1
@@ -180,7 +180,7 @@ birthday.prob = function(n.pers, n.sims) {
   result = 1 - mean(all.different)
 return(result)
 }
-n.pers.param = 27; n.sims.param = 1e4
+n.pers.param = 31; n.sims.param = 1e4
 birthday.prob(n.pers.param,n.sims.param)
 ```
 
@@ -224,7 +224,87 @@ Lets use the of examples Figure [5.2.4](https://github.com/vikjam/mostly-harmles
 
 We will go step by step using `/3-dynamicdocs/Figure 5-2-4_solutions.Rmd` as back-up.
 
+## Description
+
+- Begin a new section (`##`), titled "Description"  
+
+- Write a brief description of our goal in the DD.   
+
+- You might want to insert a reference to the paper: [link here](http://economics.mit.edu/files/589).  
+
+- Specific content not so relevant, just refer to "a treatment" and "a outcome".  
+
+## Getting the raw data
+
+- Begin a new section (`##`), titled "Raw Data".   
+- Describe what you will do.  
+- Create two code chunks:
+````
+```{r download data, eval=FALSE, echo=TRUE, 
+warning=FALSE, results='hide', message=FALSE}`r ''`
+here goes the code
+```
+````
+
+
+## Cleaning the data
+
+- Begin a new section (`##`), titled "Data Cleaning".   
+- Describe what you will do:  
+    - Restrict sample to years between 1979 and 1995 (inclusive)  
+    - Guam from the sample (state = 98).   
+- Create one code chunk:  
+````
+```{r data cleaning, echo=TRUE}`r ''`
+here goes the code
+```
+````
+
+- Add some description on the data (using dynamic reporting). See solutions (Figure `5-2-4_solutions.Rmd` line 58) for examples.   
+
+## Build the analytic file
+
+- Begin a new section (`##`), titled "Build analytic file".   
+- Describe what you will do.   
+- We need to construct the following variables:   
+    - Log of total employment  
+    - Normalize the year variable to 1978  
+- Insert a new code chunk:
+
+````
+```{r analytic file, echo=TRUE}`r ''`
+here goes the code
+```
+````
+
+## Describe the model to estimate (optional)  
+
+- Begin a new section (`##`), titled "Define model to estimate".   
+- One line describing what we want to estimate (i.e. "We want to estimate a fixed effect model with lead and lag treatment variables").     
+- A mathematical model that represents the equation to be estimated (look at solutions). 
+
+## Vizualize the results (optional)  
+- Begin a new section (`##`), titled "Vizualize the results".   
+- One line describing what we want to estimate (i.e. "This estimates are then used to create figure 3 of the original paper, which is figure 5.2.4 in MHE.").  
+````
+```{r viz}`r ''`
+here goes the code
+```
+````
+
+## Practical Excercise #2  
+- Run your version into multiple outputs.   
+- Run the solutions version into multiple outputs.   
+- Compare document with original version of the code.   
+
 # Practical Excercise #3
+
+## Goals for excercise #3  
+
+**Primary Goals:**  
+1 - Map the concepts of DD into Stata `dyndoc`.  
+2 - Demonstrate how to execute a DD in Stata.  
+
 
 ## Hands-on excercise #3: Stata and TIER
 1- Go to github.com and search `dyndoc tier` or click here: [github.com/dvorakt/TIER_exercises](https://github.com/dvorakt/TIER_exercises).   
@@ -233,11 +313,6 @@ We will go step by step using `/3-dynamicdocs/Figure 5-2-4_solutions.Rmd` as bac
 4- Open Stata (15), set working directory, and type `dyndoc "filepath/dyndoc_debt_growth/debt and growth stata dyndoc.do", replace`  
 5- Go to the folder and click in `debt and growth stata dyndoc.html` 
 
-## Goals for excercise #3  
-
-**Primary Goals:**  
-1 - Map the concepts of DD into Stata `dyndoc`.  
-2 - Demostrate how to execute a DD in Stata.  
 
 # Final Remarks & More Resources
 
