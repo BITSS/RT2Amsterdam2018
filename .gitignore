@@ -219,3 +219,5 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 .Rproj.user
+
+.DS_Store
