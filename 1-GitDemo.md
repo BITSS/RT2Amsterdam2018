@@ -198,7 +198,7 @@ There's a conflict tutorial [here](https://bids.github.io/2017-01-12-ucb/lessons
 
 You can store stuff online at GitHub.com (or any server with Git installed), which will enable you to work on multiple computers.
 
-Git frequently refers to `push`ing (sending) and `pull`ing (retreiving). Github Desktop simplifies this and just calls it "Sync".
+Git frequently refers to `push`ing (sending) and `pull`ing (retrieving). 
 
 To publish your repository on the web.
 * Just click the Publish button.
