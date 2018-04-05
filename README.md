@@ -2,6 +2,7 @@
 by [Garret Christensen](http://www.ocf.berkeley.edu/~garret), Fernando Hoces de la Guardia, and Thomas Leeper
 
 UC Berkeley ([Berkeley Initative for Transparency in the Social Sciences](http://www.bitss.org), [Berkeley Institute for Data Science](http://bids.berkeley.edu))
+
 ### Materials for the April 2018 Research Transparency & Reproducibility Training (RT2), Amsterdam
 
 The numbered files/directories will take you through the workshop in order.
@@ -35,12 +36,12 @@ Writing good code is facilitated by a good text editor. You can get away without
 - [R](https://cloud.r-project.org/)  
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 
-If you have downloaded R or RStudio, make sure that your version is up to date. 
+If you have downloaded R or RStudio, make sure that your version is up to date.
 
-Open RStudio and click on the following `File-> New File -> RMarkdown...`, when promt to install additional packages, click **yes**.  
+Open RStudio and click on the following `File-> New File -> RMarkdown...`, when prompted to install additional packages, click **yes**.  
 
-### 4. Install LaTeX 
+### 4. Install LaTeX
 If you could not install LaTeX previously, run the following 2 lines of code in the RStudio console:  
 
 `install.packages(c("tinytex", "rmarkdown"))`  
-`tinytex::install_tinytex()` 
+`tinytex::install_tinytex()`
