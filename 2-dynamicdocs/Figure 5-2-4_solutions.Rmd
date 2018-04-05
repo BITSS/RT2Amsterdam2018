@@ -2,10 +2,10 @@
 title: 'Chapter 5 of MHE: Fixed Effects, Diff-in-Diff and Panel Data'
 output:
   pdf_document: default
-  word_document: default
   html_document:
     df_print: paged
     code_folding: hide
+  word_document: default
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
 
