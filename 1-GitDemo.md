@@ -152,23 +152,23 @@ There are several ways to undo things with git, not all of which are possible wi
 
 2. Right click on a change in the History section, and click on Revert.
 
-3. Click on the settings gear and click Undo latest commit.
+3. Click Undo in the commit area after you just commited.
 
 Yes, you can undo an undo. Just make sure when you are undoing changes that you are looking in your text editor at the most up to date version (close the file and reopen it.)
 
-But what if you'd like to undo *all* the changes back to a certain point? [This is not possible in Github Desktop.](http://stackoverflow.com/questions/34790794/going-back-to-a-previous-commit-in-github-desktop) For that you have to use the command line.
+But what if you'd like to undo *all* the changes back to a certain point? [This is not possible in Github Desktop.](http://stackoverflow.com/questions/34790794/going-back-to-a-previous-commit-in-github-desktop) For that you have to use the command line, or Github.com.
 
 * Revert the commit that added the fifth line to `README.md`.
 
 * Revert the revert so you have the full six lines of `README.md` again.
 
-We'll try one quick command in the command line. (See the SWC lesson [here](https://swcarpentry.github.io/git-novice/05-history/).)
+We can try one quick command in the command line. (See the SWC lesson [here](https://swcarpentry.github.io/git-novice/05-history/).)
 
 * Open Git Shell (Windows) or Terminal (Mac).
 * Navigate (using `cd`) to inside the folder that is the repository.
 * Enter `git status` to make sure you're in your repository.
 * Enter `git log` to see the record of your changes.
-* Enter `git checkout <hash> <filename.txt>` where `<hash>` is the unique letter and number string refering to the place you want to jump back to and filename is the specific file.
+* Enter `git checkout <hash> <filename.txt>` where `<hash>` is the unique letter and number string referring to the place you want to jump back to and filename is the specific file.
 * Verify that the file has changed back to the point you want.
 * To get the latest version back, type `git checkout HEAD <filename.txt>` or `git checkout master` which will send you to the tip of the `master` branch. (I know, we haven't talked about branches yet! So let's do that now.)
 
